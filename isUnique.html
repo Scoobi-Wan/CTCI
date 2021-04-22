@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isUnique(str1) {
+            let i = 0;
+            let charTracker = [];
+            while (i < str1.length) {
+                if (charTracker.includes(str1[i])){
+                    return false;
+                }
+                charTracker.push(str1[i]);
+                i++;
+            } return true;
+        }
+
+        console.log(isUnique("elephant")); // false
+        console.log(isUnique("paul")); // true
+        console.log(isUnique("Stripes")); // true (case-sensitive)
+        console.log(isUnique("taco")); // true
+        console.log(isUnique("Marily")); // true
+        console.log(isUnique("ABBA")); // Sorry Abba :'()
+
+
+    </script>
+</body>
+</html>
