@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function isPalinPerm(str1) {
+
+            // tracks how many times the chars appear in the word
+            let charTracker = {};
+
+            for (let i = 0; i < str1.length; i++) {
+                if (str1[i] in charTracker) {
+                    charTracker[str1[i]]++;
+                } else {
+                    // ignore spaces in the charTracker
+                    if (str1[i] !== " ") {
+                        charTracker[str1[i]] = 1;
+                    }
+                }
+            }
+
+            // used to quickly access keys for charTracker object
+            let charKeys = Object.keys(charTracker);
+
+            // used to track how many chars only appear once in word
+            let soloChars = 0;
+
+            for (let i = 0; i < charKeys.length; i++) {
+
+                // One or 0 solo chars are allowed in palindrome
+                if (soloChars > 1) return false;
+
+                // for example if there are 3, 2 are paired and the other counts as a solo char
+                if (charTracker[charKeys[i]] % 2 === 1) {
+                        soloChars++;
+                } // else we can assume an even number of chars, i.e. each has a partner
+            }
+
+            // second check in case last char was a solo
+            if (soloChars > 1) return false; 
+
+            return true;
+        }
+
+        console.log(isPalinPerm("drara")) // true - radar
+        console.log(isPalinPerm("tco ctaa")) // true - taco cat
+        console.log(isPalinPerm("hugely")) // false
+        console.log(isPalinPerm("google")) // false
+        console.log(isPalinPerm("googl")) // true - does not have to be dictionary word
+        console.log(isPalinPerm("abbababba")) // true - bbaabaabb 
+    </script>
+</body>
+</html>
