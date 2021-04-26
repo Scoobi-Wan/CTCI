@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function permCheck(str1, str2) {
+
+            if (str1.length !== str2.length) return false;
+
+            let char_array1 = str1.split("");
+            let char_array2 = str2.split("");
+
+            char_array1.sort();
+            char_array2.sort();
+
+            for (let i = 0; i < char_array1.length; i++) {
+                if (char_array1[i] !== char_array2[i]) return false;
+            }
+
+            return true;
+
+        }
+
+        console.log(permCheck("Paul", "laPu"));
+        console.log(permCheck("abba", "baba"));
+        console.log(permCheck("Paul", "luap"));
+        console.log(permCheck("popcorn", "cornpap"));
+    </script>
+</body>
+</html>
