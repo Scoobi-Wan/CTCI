@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function urlify(str1) {
+
+            let newStr = "";
+
+            for (let i = 0; i < str1.length; i++) {
+                if (str1[i] === " ") { 
+                    newStr += "%20";
+                } else {
+                    newStr += str1[i];
+                }
+            }
+
+            return newStr;
+        }
+
+        console.log(urlify("Hello world"));
+        console.log(urlify("abba"));
+        console.log(urlify("replace all the spaces pleaseeee"));
+        console.log(urlify("Hello paul hello"));
+    </script>
+</body>
+</html>
