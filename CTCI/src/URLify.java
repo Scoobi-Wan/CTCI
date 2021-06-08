@@ -1,6 +1,11 @@
 
 public class URLify {
 
+	/*
+	 * Author: Paul Rich
+	 * Problem: Cracking The Coding Interview 1.3
+	 * Notes: 
+	 */
 	public char[] solution(char[] str, int strlen) {
 		 int newlen = strlen;
 		 int i = 0;
