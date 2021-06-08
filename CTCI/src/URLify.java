@@ -7,15 +7,25 @@ public class URLify {
 	 * Notes: 
 	 */
 	public char[] solution(char[] str, int strlen) {
+		 
+		 // newlen will be used to find needed length of the URLified character array
 		 int newlen = strlen;
+		 
+		 // int i: used as index for loops
 		 int i = 0;
+		 
+		 // first loop: if current char is a space, increase newlen by 2 (for '20' in '%20')
 		 while (i < strlen) {
 			 if (str[i] == ' ') {
 				 newlen += 2;
 			 }	
 			 i++;
 		 }
+		 
+		 // Declaration of URLified character array
 		 char[] updatedArray = new char[newlen];
+		 
+		 // reset the index
 		 i = 0;
 		 int j = 0;
 		 while (j < newlen) {
