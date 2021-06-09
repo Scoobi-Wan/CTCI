@@ -27,7 +27,11 @@ public class URLify {
 		 
 		 // reset the index
 		 i = 0;
+		 // int j: used to index the URLified character array since indexes will be out of sync
 		 int j = 0;
+		 
+		 // second loop: traverse character array, if character is a space, add %,2,0 to the character array
+		 // otherwise add the original character
 		 while (j < newlen) {
 			 if (str[i] == ' ') {
 				 updatedArray[j] = '%';
