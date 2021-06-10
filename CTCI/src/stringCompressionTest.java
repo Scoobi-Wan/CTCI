@@ -9,6 +9,8 @@ class stringCompressionTest {
 		stringCompression mySC = new stringCompression();
 		assertEquals(mySC.solution("aabcccccaaa"), "a2b1c5a3");
 		assertEquals(mySC.solution("aaaaaaaaaaa"), "a11");
+		assertEquals(mySC.solution("aaba"), "aaba");
+		assertEquals(mySC.solution("a"), "a");
 	}
 
 }
