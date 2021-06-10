@@ -9,6 +9,7 @@ public class stringCompression {
 	public String solution(String str) {
 		String compressed = "";
 		
+		// 
 		for (int i = 0; i < str.length();) {
 			int inARow = 1;
 			while (i + inARow < str.length() && str.charAt(i + inARow) == str.charAt(i)) {
@@ -18,6 +19,7 @@ public class stringCompression {
 			i += inARow;
 		}
 		
+		// return whatever is smaller, the compressed string or the original string
 		return compressed.length() < str.length() ? compressed : str;
 	}
 }
