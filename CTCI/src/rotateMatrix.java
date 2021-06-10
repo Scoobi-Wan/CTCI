@@ -6,7 +6,7 @@ public class rotateMatrix {
 		
 		ArrayList<Integer> row = new ArrayList<Integer>();
 		
-		int j = 0;
+		int j = matrix.length;
 		
 		for (int i = matrix[0].length; i >= 0; i--) {
 			int temp = matrix[0][i];
