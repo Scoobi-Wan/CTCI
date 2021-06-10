@@ -7,7 +7,7 @@ class stringCompressionTest {
 	@Test
 	void test() {
 		stringCompression mySC = new stringCompression();
-		assertEquals(mySC.solution("aabccccaaa"), "a2b1c5a3");
+		assertEquals(mySC.solution("aabcccccaaa"), "a2b1c5a3");
 	}
 
 }

@@ -18,6 +18,6 @@ public class stringCompression {
 			i += inARow;
 		}
 		
-		return compressed.length() > str.length() ? compressed : str;
+		return compressed.length() < str.length() ? compressed : str;
 	}
 }
