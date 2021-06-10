@@ -4,7 +4,9 @@ public class stringCompression {
 	/*
 	 * Author: Paul Rich
 	 * Problem: Cracking The Coding Interview 1.6
-	 * Notes: 
+	 * Notes: Loops the string char by char, uses nested while loop to peek ahead
+	 * 		  for equal characters and returns the compressed information as a new string.
+	 * 		  *Compressed string is only returned if it is shorter than original string
 	 */
 	public String solution(String str) {
 		String compressed = "";
