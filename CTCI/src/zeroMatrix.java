@@ -1,34 +1,42 @@
+import java.util.ArrayList;
 
 public class zeroMatrix {
 	public int[][] solution(int[][] input) {
+		class point{
+			int x; int y;
+			private point(int x, int y) {
+				this.x = x; this.y = y;
+			}
+		}
 		
-		int[][] toReturn = new int[input.length][input[0].length];
+		ArrayList<point> zeroLocs = new ArrayList<point>();
 		
 		for (int i = 0; i < input.length; i++) {
 			for (int j = 0; j < input[i].length; j++) {
 				if (input[i][j] == 0) {
-					int first = 0;
-					int last = input.length;
-					while (first < last) {
-						toReturn[i][first] = 0;
-						first++;
-					}
-					first = 0;
-					last = input[0].length;
-					while (first < last) {
-						toReturn[first][j] = 0;
-						first++;
-					}
-				} else {
-					if (toReturn[i][j] != 0 ) {
-						toReturn[i][j] = input[i][j];
-					}
+					zeroLocs.add(new point(i, j));
 				}
 			}
 		}
-		
-		
-		
-		return toReturn;
+					
+		for (point p : zeroLocs) {
+					
+			int first = 0;
+			int last = input.length;
+			while (first < last) {
+				input[p.x][first] = 0;
+				first++;
+			}
+			
+			first = 0;
+			last = input[0].length;
+			while (first < last) {
+				input[first][p.y] = 0;
+				first++;
+				}
+			} 
+
+			return input;
+			
 	}
 }
