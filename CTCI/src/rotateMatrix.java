@@ -6,13 +6,17 @@ public class rotateMatrix {
 		
 		ArrayList<Integer> row = new ArrayList<Integer>();
 		
-		int j = matrix.length;
+		int k = matrix.length;
 		
-		for (int i = matrix[0].length; i >= 0; i--) {
-			int temp = matrix[0][i];
-			matrix[0][i] = matrix[matrix.length][j];
-			matrix[matrix.length][j] = temp;
-			j++;
+		for (int i = matrix.length; i >= 0; i--) {
+			for (int j = 0; j < matrix.length; j++) {
+				int temp = matrix[j][k];
+				matrix[j][k] = matrix[i][j];
+				
+			}
+			
+			
+			k--;
 		}
 		
 		return matrix;
