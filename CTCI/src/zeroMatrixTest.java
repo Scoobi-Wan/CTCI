@@ -14,8 +14,8 @@ class zeroMatrixTest {
 		assertEquals(output[1][1], 0);
 		assertEquals(output[1][0], 0);
 		assertEquals(output[3][3], 19);
-		assertEquals(output[1][0], 0);
-		assertEquals(output[1][0], 0);
+		assertEquals(output[3][4], 0);
+		assertEquals(output[3][1], 17);
 		
 	}
 				
