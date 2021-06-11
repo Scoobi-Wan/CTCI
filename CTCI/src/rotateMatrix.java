@@ -8,15 +8,16 @@ public class rotateMatrix {
 		
 		int k = matrix.length;
 		
-		for (int i = 0; i < matrix.length / 2; i++) {
-			for (int j = 0; j < matrix.length; j++) {
-				int l = i - j;
-				int temp = matrix[j][k];
-				matrix[j][k] = matrix[i][j];
-				matrix[i][j] = matrix[k-l][i];
-				matrix[k-l][i] = matrix[k][k-l];
-				matrix[k][k-l] = matrix[i][k];
-				matrix[i][k] = temp;
+		for (int layer = 0; layer < matrix.length / 2; layer++) {
+			int first = layer;
+			int last = k - 1 - layer;
+			for (int i = 0; i < last; i++) {
+				int offset = i - first;
+				int temp = matrix[first][i];
+				matrix[first][i] = matrix[last-offset][first];
+				matrix[last-offset][first] = matrix[last][last-offset];
+				matrix[last][last-offset] = matrix[i][last];
+				matrix[i][last] = temp;
 
 			}
 			
