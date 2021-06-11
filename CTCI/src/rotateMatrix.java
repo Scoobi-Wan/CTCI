@@ -17,8 +17,7 @@ public class rotateMatrix {
 				matrix[k-l][i] = matrix[k][k-l];
 				matrix[k][k-l] = matrix[i][k];
 				matrix[i][k] = temp;
-				
-				
+
 			}
 			
 			
