@@ -11,7 +11,7 @@ class sumListsTest {
 		sumLists sl = new sumLists();
 		Node num1 = new Node(7);
 		num1.next = new Node(1);
-		num1.next = new Node(6);
+		num1.next.next = new Node(6);
 		
 		Node num2 = new Node(5);
 		num2.next = new Node(9);
