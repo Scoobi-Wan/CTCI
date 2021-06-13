@@ -1,8 +1,10 @@
 package chapter2;
 
+import java.util.ArrayList;
+
 public class returnKthToLast {
 
-	public Node solution(Node node, int toLastIndex) {
+	public Node solution1(Node node, int toLastIndex) {
 		
 		Node head = node;
 		
@@ -21,12 +23,20 @@ public class returnKthToLast {
 		while (i < targetIndex) {
 			node = node.next;
 			i++;
-		}
-		
-		
-		
+		}		
 		return node;
 		
+	}
+	
+	public Node solution2(Node node, int toLastIndex) {
+		ArrayList<Node> myList = new ArrayList<Node>();
+		while (node != null) {
+			myList.add(node);
+			node = node.next;
+		}
+		
+		int target = myList.size() - 1 - toLastIndex;
+		return myList.get(target);
 	}
 	
 }
