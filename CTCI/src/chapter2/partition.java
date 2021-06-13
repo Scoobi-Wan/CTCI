@@ -11,6 +11,7 @@ public class partition {
 		Node lessNode = null;
 		Node greaterNode = null;
 		Node headNode = null;
+		Node greaterHeadNode = null;
 		
 		while (node != null) {
 			if (node.val < partitionVal) {
@@ -22,16 +23,19 @@ public class partition {
 					lessNode = lessNode.next;
 				}
 			} else {
-				if (greaterNode == null) greaterNode = node;
+				if (greaterNode == null) {
+					greaterNode = node;
+					greaterHeadNode = node;
+				}
 				else {
 					greaterNode.next = node;
-					greaterNode = greaterNode;
+					greaterNode = greaterNode.next;
 				}
 			}
 			node = node.next;
 		}
 		
-		lessNode.next = greaterNode;
+		lessNode.next = greaterHeadNode;
 		
 		return headNode;
 	}

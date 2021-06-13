@@ -21,7 +21,8 @@ class partitionTest {
 		assertEquals(newHead.next.val, 15);
 		assertEquals(newHead.next.next.val, 5);
 		assertEquals(newHead.next.next.next.val, 25);
-		assertEquals(newHead.next.next.next.next.val, 30);
+		assertEquals(newHead.next.next.next.next.val, 45);
+		assertEquals(newHead.next.next.next.next.next.val, 30);
 	}
 
 }
