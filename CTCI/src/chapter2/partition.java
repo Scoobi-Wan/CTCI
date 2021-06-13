@@ -2,6 +2,11 @@ package chapter2;
 
 public class partition {
 
+	/*
+	 * Author: Paul Rich
+	 * Problem: Cracking The Coding Interview
+	 * Notes: partitions linked-list around partitionVal. nums < partitionVal come first, then nums >= partitionVal
+	 */
 	public Node solution(Node node, int partitionVal) {
 		Node lessNode = null;
 		Node greaterNode = null;
