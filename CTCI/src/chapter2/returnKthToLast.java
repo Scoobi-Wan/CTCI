@@ -15,7 +15,7 @@ public class returnKthToLast {
 		
 		node = head;
 		
-		int targetIndex = len - toLastIndex;
+		int targetIndex = len - toLastIndex - 1;
 		int i = 0;
 		
 		while (i < targetIndex) {
