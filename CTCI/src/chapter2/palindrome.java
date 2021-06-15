@@ -35,6 +35,7 @@ public class palindrome {
 	public boolean solution2(Node node, int len) {
 		
 		
+		
 		return true;
 	}
 	
