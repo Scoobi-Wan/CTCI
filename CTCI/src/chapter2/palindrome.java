@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class palindrome {
 
+	/*
+	 * Author: Paul Rich
+	 * Problem: Cracking The Coding Interview 2.6
+	 * Notes: 
+	 */
 	public boolean solution1(Node node) {
 		
 		ArrayList<Character> myStack = new ArrayList<Character>();
