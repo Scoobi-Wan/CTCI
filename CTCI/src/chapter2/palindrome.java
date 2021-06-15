@@ -19,7 +19,7 @@ public class palindrome {
 		}
 		
 		int first = 0;
-		int last = myStack.size();
+		int last = myStack.size() - 1;
 		while (first < myStack.size() / 2) {
 			if (myStack.get(first) != myStack.get(last)) {
 				return false;
